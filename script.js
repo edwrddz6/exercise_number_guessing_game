@@ -16,3 +16,18 @@
 // Pseudocode - I will create a html button to initiate PROMPT. I will use a WHILE loop to keep asking the user to guess until 
 //              they guess the correct number. I will add an ALERT with a message if they guess it correctly. 
 
+
+let button = document.getElementById("button");
+
+button.addEventListener("click", function () {
+  while (true) {
+    let userInput = parseInt(prompt("Enter a Number"));
+
+    if (userInput === 6) {
+      alert("You got it! It was 6!");
+      break;
+    } else if (userInput !== 6) {
+      alert("Sorry, try again!");
+    }
+  }
+});
